@@ -1,19 +1,67 @@
 <!doctype html>
 <html lang="nl">
-	
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="author" content="jouw naam">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<title>Naam van je site en/of pagina</title>
-	
-	<link href="styles/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="author" content="jouw naam">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Naam van je site en/of pagina</title>
+
+    <link href="styles/style.css" rel="stylesheet">
 </head>
 
 <body>
 
-	<script src="scripts/script.js"></script>
+    <header>
+
+        <!-- logo/name -->
+        <a href="#"><img src="images/BV_IconicLogo.png"></a>
+
+        <!-- navigatie -->
+        <nav>
+            <ul>
+                <li><a class="active">Werk</a></li>
+                <li><a href="#">Over mij</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- het zoek-formulier -->
+        <form role="search" action="#">
+            <input type="search" name="search" id="search" placeholder="eg. UI, CSS..." autocomplete="off" aria-label="zoeken">
+            <button type="submit">Zoeken</button>
+        </form>
+
+
+
+    </header>
+
+
+    <section class="outer">
+        <h1>TOP STORIES</h1>
+        <section class="inner">
+            <img src="images/bettersociety.png">
+            <h2>BALI OPENT 'S WERELDS EERSTE REVALIDATIE CENTRUM VOOR DOLFIJNEN UIT GEVANGENSCHAP
+            </h2>
+            <div class="button-container">
+
+                <button class="button-1"></button>
+                <button class="button-2"></button>
+                <button class="button-3"></button>
+                <button class="button-3"></button>
+            </div>
+        </section>
+    </section>
+    <main>
+        <section class="articles">
+            <article class="better_society">
+            <img src="images/bettersociety.png"><h3>DE ALLERLEUKSTE DIERENFOTO'S VAN 2020, DE FINALISTEN VAN DE ‘COMEDY WILDLIFE PHOTOGRAPHY AWARDS 2020</h3><p>Een greep uit de finalisten van de Comedy Wildlife Competition, de leukste fotowedstrijd die er is. De ene foto is nog leuker dan de andere. De wedstrijd is niet alleen leuk, maar vraagt ook aandacht voor een goede zaak.</p>
+                 </article>
+        </section>
+    </main>
+
+    <script src="scripts/script.js"></script>
 </body>
-	
+
 </html>
