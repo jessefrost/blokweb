@@ -1,0 +1,353 @@
+/* CSS Document */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+/* een paar algemene dingetjes */
+/* hoef je niets aan te veranderen */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    font-family: 'Saira', sans-serif;
+    color: DarkSlateGray;
+}
+
+body {
+    margin: 0;
+   background-color: rgb(105, 105, 105);
+
+
+}
+
+
+
+/************************/
+/* LAYOUT VAN DE HEADER */
+/************************/
+
+header {
+    background-color: rgb(236, 237, 235);
+
+    /* jouw code hier */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/*************/
+/* logo/name */
+/*************/
+
+/* hoef je niets aan te veranderen */
+
+header > a {
+    display: block;
+    width: 7.5em;
+    height: 3.5em;
+    line-height: 1em;
+    padding: .75em 0 .75em 2.75em;
+
+    font-weight: bold;
+    color: DarkSlateGray;
+    background: url("BV_IconicLogo.png") .75em center / auto 2.75em no-repeat;
+
+    text-decoration: none;
+    outline: none;
+}
+
+header > a:hover {
+    padding: .75em 2.75em .75em 0;
+    text-align: right;
+    background-position: calc(100% - .75em) center;
+}
+
+header > a:focus {
+    text-decoration: underline;
+}
+
+header > a > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+/*************/
+/* navigatie */
+/*************/
+
+header nav {
+    background-color: rgb(236, 237, 235);
+
+    /* jouw code hier */
+    flex-grow: 1;
+
+
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    /* jouw code hier */
+    display: flex;
+
+}
+
+header nav li {
+    /* jouw code hier */
+    flex-grow: 1;
+
+}
+
+header nav li + li {}
+
+header nav a {
+    color: black;
+    background-color: rgb(236, 237, 235);
+    text-decoration: none;
+    outline: none;
+
+    /* jouw code hier */
+    display: block;
+    line-height: 60px;
+    padding-left: 20px;
+}
+
+header nav a.active {
+    font-weight: bold;
+    /* de cursor geen handje wordt als je over de active link hovert */
+    cursor: default;
+}
+
+header nav a:hover:not(.active) {
+    /* als je over een link in het menu (maar niet de active link) hovert */
+    color: rgb(145, 145, 145);
+    background-color: white;
+}
+
+header nav a:focus {
+    /* links in het menu wordt onderstreept als je er met het toetsenbord naar tabt */
+    text-decoration: underline;
+}
+
+
+/******************/
+/* zoek-formulier */
+/******************/
+
+header form {
+    padding: .75em;
+    background-color: rgba(0, 0, 0, .2);
+
+    /* jouw code hier */
+    display: flex;
+
+
+}
+
+header form input {
+    /* jouw code hier */
+
+    flex-grow: 1;
+}
+
+/* styling van het zoekveld en de button */
+/* hoef je niets aan te veranderen */
+
+input,
+button {
+    font-size: 1em;
+    /* om de standaard style op bijv. iOS te voorkomen */
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+
+
+}
+
+header form input {
+    width: 12em;
+    max-width: 38em;
+    line-height: 2em;
+    padding: 0 .5em;
+
+}
+
+header form button {
+    line-height: 2em;
+    padding: 0 .5em;
+    background-color: rgb(236, 237, 235);
+    color: black;
+
+}
+
+
+section.outer {
+
+    justify-content: center;
+    display: flex;
+
+    background-color: rgb(105, 105, 105);
+
+
+
+
+
+
+}
+
+/******************/
+/* Carousel_bovenkant_Home */
+/******************/
+
+
+section.outer h1 {
+    color: white;
+    font-size: 22px;
+    text-align: center;
+
+}
+
+section.inner {
+
+    position: absolute;
+    margin-top: 55px;
+    background-color: rgb(93, 184, 217);
+    padding-top: 2px;
+    width: 90%;
+
+}
+
+section.inner img {
+
+
+
+    display: block;
+    width: 100%;
+}
+
+
+
+section.inner h2 {
+ 
+
+    color: white;
+    font-size: 16px;
+    position: relative;
+    text-align: center;
+    background-color: rgb(93, 184, 217);
+    padding-top: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/******************/
+/* Carousel_Buttons */
+/******************/
+
+div.button-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    background-color: rgb(105, 105, 105);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+        
+}
+
+div.button-container button + button {
+
+    margin-left: 1px;
+
+
+}
+
+div.button-container button {
+    padding: 1px;
+    margin: 5px;
+    background-color:rgb(130, 130, 130);
+    border: 2px solid rgb(130, 130, 130);
+    border-radius: 25px;
+     outline: none;
+}
+div.button-container > button:focus {
+       background-color: white;
+    border: 2px solid white;
+     text-decoration: none;
+}
+
+div.button-container > button.active {
+    font-weight: bold;
+    /* de cursor geen handje wordt als je over de active link hovert */
+    cursor: default;
+}
+
+div.button-container > button:hover:not(.active) {
+    /* als je over een link in het menu (maar niet de active link) hovert */
+ 
+           background-color: white;
+    border: 2px solid white;
+     cursor: pointer;
+}
+
+/******************/
+/* Main + Articles */
+/******************/
+main {
+    margin-top: 400px;
+    background-color: rgb(235, 235, 235);
+        
+}
+section.articles {
+    
+  justify-content: center;
+    display: flex;
+}
+
+section.articles > article.better_society {
+   
+    margin-top: 30px;
+    background-color: white;
+    width: 90%;
+    
+}
+section.articles  article.better_society img {
+
+
+
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid rgb(93, 184, 217);
+}
+
+section.articles article.better_society h3 {
+ 
+
+    color: black;
+    font-size: 16px;
+    position: relative;
+    background-color: white;
+    padding-top: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+section.articles article.better_society p {
+ 
+
+    color: black;
+    font-size: 12px;
+    position: relative;
+    background-color: white;
+    padding-top: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
