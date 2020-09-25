@@ -1,4 +1,7 @@
 /* CSS Document */
+
+
+
 *,
 *::after,
 *::before {
@@ -17,7 +20,7 @@
 
 body {
     margin: 0;
-   background-color: rgb(105, 105, 105);
+    background-color: rgb(105, 105, 105);
 
 
 }
@@ -29,7 +32,7 @@ body {
 /************************/
 
 header {
-    background-color: rgb(236, 237, 235);
+    background-color: rgb(240, 240, 240);
 
     /* jouw code hier */
     display: flex;
@@ -193,7 +196,7 @@ section.outer {
 
     justify-content: center;
     display: flex;
-
+    height: 100%;
     background-color: rgb(105, 105, 105);
 
 
@@ -212,18 +215,22 @@ section.outer h1 {
     color: white;
     font-size: 22px;
     text-align: center;
+    position: absolute;
 
 }
 
+
+
 section.inner {
 
-    position: absolute;
+
     margin-top: 55px;
-    background-color: rgb(93, 184, 217);
+    background-color: #56c6e1;
     padding-top: 2px;
     width: 90%;
 
 }
+
 
 section.inner img {
 
@@ -235,14 +242,14 @@ section.inner img {
 
 
 
-section.inner h2 {
- 
+section.inner #h2-1 {
+
 
     color: white;
     font-size: 16px;
-    position: relative;
+
     text-align: center;
-    background-color: rgb(93, 184, 217);
+
     padding-top: 0px;
     padding-left: 15px;
     padding-right: 15px;
@@ -255,13 +262,13 @@ section.inner h2 {
 div.button-container {
     display: flex;
     justify-content: center;
-    position: relative;
-
     background-color: rgb(105, 105, 105);
+
+
     padding-top: 10px;
     padding-bottom: 10px;
-    
-        
+
+
 }
 
 div.button-container button + button {
@@ -274,15 +281,16 @@ div.button-container button + button {
 div.button-container button {
     padding: 1px;
     margin: 5px;
-    background-color:rgb(130, 130, 130);
+    background-color: rgb(130, 130, 130);
     border: 2px solid rgb(130, 130, 130);
     border-radius: 25px;
-     outline: none;
+    outline: none;
 }
+
 div.button-container > button:focus {
-       background-color: white;
+    background-color: white;
     border: 2px solid white;
-     text-decoration: none;
+    text-decoration: none;
 }
 
 div.button-container > button.active {
@@ -293,44 +301,107 @@ div.button-container > button.active {
 
 div.button-container > button:hover:not(.active) {
     /* als je over een link in het menu (maar niet de active link) hovert */
- 
-           background-color: white;
-    border: 2px solid white;
-     cursor: pointer;
-}
 
-/******************/
-/* Main + Articles */
-/******************/
-main {
-    margin-top: 400px;
-    background-color: rgb(235, 235, 235);
-        
-}
-section.articles {
-    
-  justify-content: center;
-    display: flex;
-}
-
-section.articles > article.better_society {
-   
-    margin-top: 30px;
     background-color: white;
-    width: 90%;
-    
+    border: 2px solid white;
+    cursor: pointer;
 }
-section.articles  article.better_society img {
+
+
+/* Carousel_Script */
+section.inner.anders-1 {
+    color: #56c6e1;
+    background-color: #56c6e1;
+
+}
+
+section.inner.anders-2 {
+    color: #17a555;
+    background-color: #17a555;
+
+}
+
+section.inner.anders-3 {
+    color: #ed5C4b;
+    background-color: #ed5C4b;
+
+}
+
+section.inner.anders-4 {
+    color: #f9b86e;
+    background-color: #f9b86e;
+
+}
 
 
 
-    display: block;
+
+
+
+/******************/
+/* Articles */
+/******************/
+
+section.articles {
+
+    list-style: none;
+    width 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-row: 20px;
+    grid-gap: 20px;
+
+    padding: 40px;
+
+    background-color: rgb(217, 217, 217);
+    padding-top: 30px;
+}
+
+
+/******************/
+/* Thema's */
+/******************/
+
+section.articles > article.gewoonGoed {
+    background-color: white;
+}
+
+section.articles article.gewoonGoed img {
     width: 100%;
-    border-bottom: 2px solid rgb(93, 184, 217);
+    border-bottom: 4px solid rgb(93, 184, 217);
 }
 
-section.articles article.better_society h3 {
- 
+
+section.articles > article.sustainablePlanet {
+    background-color: white;
+}
+
+section.articles article.sustainablePlanet img {
+
+
+    border-bottom: 4px solid rgb(23, 165, 85);
+    width: 100%;
+}
+
+section.articles > article.inspirerendeMensen {
+    background-color: white;
+}
+
+section.articles article.inspirerendeMensen img {
+
+    border-bottom: 4px solid rgb(237, 92, 75);
+    width: 100%;
+}
+
+
+/******************/
+/* Typography*/
+/******************/
+
+
+
+section.articles h3 {
+
 
     color: black;
     font-size: 16px;
@@ -340,8 +411,10 @@ section.articles article.better_society h3 {
     padding-left: 15px;
     padding-right: 15px;
 }
-section.articles article.better_society p {
- 
+
+section.articles p {
+
+
 
     color: black;
     font-size: 12px;
@@ -350,4 +423,74 @@ section.articles article.better_society p {
     padding-top: 0px;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+/******************/
+/* Footer*/
+/******************/
+
+footer {
+    background-color:rgb(240, 240, 240); 
+    padding: 90px 0;
+    margin: 
+}
+
+.footer-container {
+    max-width: 1300px;
+    margin-right: 40px;
+    margin-left: 40px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+}
+.footerLogo {
+    width: 230px;
+}
+.social-media {
+    margin: 20px 0;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+    color:black;
+    
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+.right-text {
+    color: black;
+    font-size: 12px;
+}
+.right-col h4 {
+    font-size: 26px;
+    color: black;
+
+}
+.right-col a {
+    font-size: 14px;
+    color: black;
+    bottom:0;
+}
+@media screen and (max-width:960px) {
+    .footer-container{
+        max-width: 600px
+    }
+    .right-col{
+        width: 100%;
+        margin-bottom: 60px;
+    }
+    .left-col{
+        width: 100%;
+        text-align: center;
+    }
 }
