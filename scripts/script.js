@@ -78,3 +78,6 @@ function veranderDeVierdeB() {
     /* toggle voegt toe en verwijdert om-en-om */
 }
 // JavaScript Document
+
+
+

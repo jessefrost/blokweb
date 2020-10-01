@@ -32,12 +32,37 @@ body {
 /************************/
 
 header {
-    background-color: rgb(240, 240, 240);
 
-    /* jouw code hier */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width: 100%;
+  position:sticky;
+  top:0;
+    background-color:rgb(240, 240, 240);
+    padding-bottom: 6px;
+    
+    
+}
+header > button {
+  position:relative;
+  width:5em; height:2.5em;
+  font-size:1em;
+  background-color:gray;
+  border:none;
+  border-radius:.25em;
+  appearance:none;
+  cursor:pointer;
+  color: white;
+  /* jouw code hier */
+  z-index:100;
+    margin-right: 20px;
+}
+header > img {
+        display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: clamp(14ch, 23%, 20ch);
 }
 
 
@@ -227,7 +252,7 @@ section.inner {
     margin-top: 55px;
     background-color: #56c6e1;
     padding-top: 2px;
-    width: 90%;
+    width: clamp(46ch, 50%, 66ch);
 
 }
 
@@ -405,7 +430,7 @@ section.articles h3 {
 
     color: black;
     font-size: 16px;
-    position: relative;
+ 
     background-color: white;
     padding-top: 0px;
     padding-left: 15px;
@@ -418,7 +443,7 @@ section.articles p {
 
     color: black;
     font-size: 12px;
-    position: relative;
+
     background-color: white;
     padding-top: 0px;
     padding-left: 15px;
@@ -481,16 +506,18 @@ footer {
     color: black;
     bottom:0;
 }
-@media screen and (max-width:960px) {
+@media screen and (max-width:660px) {
     .footer-container{
         max-width: 600px
     }
     .right-col{
         width: 100%;
         margin-bottom: 60px;
+        text-align: center;
     }
     .left-col{
         width: 100%;
         text-align: center;
     }
 }
+
