@@ -5,7 +5,7 @@
 // Blauw - button 1
 
 
-
+//
 
 var deEersteButton = document.querySelector(".button-1");
 

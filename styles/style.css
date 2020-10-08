@@ -33,33 +33,23 @@ body {
 
 header {
 
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  width: 100%;
-  position:sticky;
-  top:0;
-    background-color:rgb(240, 240, 240);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    position: sticky;
+    top: 0;
+    background-color: rgb(240, 240, 240);
     padding-bottom: 6px;
-    
-    
+
+
+
 }
-header > button {
-  position:relative;
-  width:5em; height:2.5em;
-  font-size:1em;
-  background-color:gray;
-  border:none;
-  border-radius:.25em;
-  appearance:none;
-  cursor:pointer;
-  color: white;
-  /* jouw code hier */
-  z-index:100;
-    margin-right: 20px;
-}
+
+
 header > img {
-        display: block;
+    display: block;
     margin-left: auto;
     margin-right: auto;
     width: clamp(14ch, 23%, 20ch);
@@ -77,7 +67,7 @@ header > a {
     width: 7.5em;
     height: 3.5em;
     line-height: 1em;
-    padding: .75em 0 .75em 2.75em;
+    padding: .75em 0 .0 2.75em;
 
     font-weight: bold;
     color: DarkSlateGray;
@@ -85,139 +75,218 @@ header > a {
 
     text-decoration: none;
     outline: none;
+
 }
 
-header > a:hover {
-    padding: .75em 2.75em .75em 0;
-    text-align: right;
-    background-position: calc(100% - .75em) center;
-}
 
-header > a:focus {
-    text-decoration: underline;
-}
 
 header > a > img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+
+
+    width: clamp(30px, 5vw, 40px);
+}
+
+header > a > img:hover {
+
+    transform: scale(0.7);
+    transition: 0.4s ease;
+
 }
 
 
 /*************/
 /* navigatie */
 /*************/
+#menu-wrap {
 
-header nav {
-    background-color: rgb(236, 237, 235);
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
 
-    /* jouw code hier */
-    flex-grow: 1;
+#menu-wrap .toggler {
+    top: 0;
+    right: 0;
+    z-index: 1;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    position: absolute;
+}
+
+
+#menu-wrap .hamburger {
+
+    top: 0;
+    right: 0;
+    width: 60px;
+
+
+    padding: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+
+}
+
+#menu-wrap .hamburger > div {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+
+}
+
+#menu-wrap .hamburger > div:before,
+#menu-wrap .hamburger > div:after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+}
+
+
+
+
+#menu-wrap .hamburger > div:after {
+    top: 10px;
+
+}
+
+#menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+
+}
+
+#menu-wrap .toggler:checked + .hamburger > div:before,
+#menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+
+
+#menu-wrap .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+}
+
+#menu-wrap .toggler:checked ~ .menu-overlay {
+    visibility: visible;
+}
+
+#menu-wrap .toggler:checked ~ .menu-overlay > div {
+    transform: scale(1);
+
+}
+
+
+
+
+
+#menu-wrap .toggler:checked ~ .menu-overlay > div > div {
+    opacity: 1;
+    transition: opacity 0, 4s ease;
+
+}
+
+#menu-wrap .menu-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 120%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0.9;
+
+}
+
+#menu-wrap .menu-overlay > div {
+    background-color: white;
+    border-radius: 10%;
+    width: 200vw;
+    height: 200vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    transform: scale(0);
+
+
+
+
+
 
 
 }
 
-header nav ul {
-    margin: 0;
-    padding: 0;
+
+
+
+#menu-wrap .menu-overlay > div > div {
+    text-align: center;
+    max-width: 100vw;
+    max-height: 200vh;
+    transition: opacity 0.4s ease;
+    opacity: 0;
+}
+
+#menu-wrap .menu-overlay > div > div > ul > li {
     list-style: none;
 
-    /* jouw code hier */
-    display: flex;
-
+    font-size: 1.5rem;
+    padding: 1rem;
 }
 
-header nav li {
-    /* jouw code hier */
-    flex-grow: 1;
 
-}
 
-header nav li + li {}
-
-header nav a {
+#menu-wrap .menu-overlay > div > div > ul > li > a {
     color: black;
-    background-color: rgb(236, 237, 235);
     text-decoration: none;
-    outline: none;
+    transition: color 0.4s ease;
+    font-family: roboto;
+    font-weight: 700;
+    font-size: 22px;
+    position: relative;
 
-    /* jouw code hier */
-    display: block;
-    line-height: 60px;
-    padding-left: 20px;
-}
-
-header nav a.active {
-    font-weight: bold;
-    /* de cursor geen handje wordt als je over de active link hovert */
-    cursor: default;
-}
-
-header nav a:hover:not(.active) {
-    /* als je over een link in het menu (maar niet de active link) hovert */
-    color: rgb(145, 145, 145);
-    background-color: white;
-}
-
-header nav a:focus {
-    /* links in het menu wordt onderstreept als je er met het toetsenbord naar tabt */
-    text-decoration: underline;
 }
 
 
-/******************/
-/* zoek-formulier */
-/******************/
 
-header form {
-    padding: .75em;
-    background-color: rgba(0, 0, 0, .2);
 
-    /* jouw code hier */
-    display: flex;
+#menu-wrap .menu-overlay > div > div > ul > li > a:hover {
+    color: rgb(210, 168, 205);
+    text-shadow: 1px 1px 10px rgb(207, 207, 207);
 
 
 }
 
-header form input {
-    /* jouw code hier */
-
-    flex-grow: 1;
-}
 
 /* styling van het zoekveld en de button */
 /* hoef je niets aan te veranderen */
 
-input,
-button {
-    font-size: 1em;
-    /* om de standaard style op bijv. iOS te voorkomen */
-    -webkit-appearance: none;
-    appearance: none;
-    border: none;
 
 
-}
-
-header form input {
-    width: 12em;
-    max-width: 38em;
-    line-height: 2em;
-    padding: 0 .5em;
-
-}
-
-header form button {
-    line-height: 2em;
-    padding: 0 .5em;
-    background-color: rgb(236, 237, 235);
-    color: black;
-
-}
 
 
-section.outer {
+.outer {
 
     justify-content: center;
     display: flex;
@@ -236,20 +305,24 @@ section.outer {
 /******************/
 
 
-section.outer h1 {
+h1 {
     color: white;
-    font-size: 22px;
+    font-size: clamp(18px, 2vw, 23px);
     text-align: center;
-    position: absolute;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+
 
 }
 
 
 
-section.inner {
+.inner {
 
 
-    margin-top: 55px;
+    margin-top: 5px;
     background-color: #56c6e1;
     padding-top: 2px;
     width: clamp(46ch, 50%, 66ch);
@@ -257,7 +330,7 @@ section.inner {
 }
 
 
-section.inner img {
+.inner img {
 
 
 
@@ -267,11 +340,11 @@ section.inner img {
 
 
 
-section.inner #h2-1 {
+.inner #h2-1 {
 
-
+    font-size: clamp(14px, 2vw, 18px);
     color: white;
-    font-size: 16px;
+
 
     text-align: center;
 
@@ -284,7 +357,7 @@ section.inner #h2-1 {
 /* Carousel_Buttons */
 /******************/
 
-div.button-container {
+.button-container {
     display: flex;
     justify-content: center;
     background-color: rgb(105, 105, 105);
@@ -296,14 +369,14 @@ div.button-container {
 
 }
 
-div.button-container button + button {
+.button-container button + button {
 
     margin-left: 1px;
 
 
 }
 
-div.button-container button {
+.button-container button {
     padding: 1px;
     margin: 5px;
     background-color: rgb(130, 130, 130);
@@ -312,13 +385,13 @@ div.button-container button {
     outline: none;
 }
 
-div.button-container > button:focus {
+.button-container > button:focus {
     background-color: white;
     border: 2px solid white;
     text-decoration: none;
 }
 
-div.button-container > button.active {
+.button-container > button.active {
     font-weight: bold;
     /* de cursor geen handje wordt als je over de active link hovert */
     cursor: default;
@@ -334,25 +407,25 @@ div.button-container > button:hover:not(.active) {
 
 
 /* Carousel_Script */
-section.inner.anders-1 {
+.inner.anders-1 {
     color: #56c6e1;
     background-color: #56c6e1;
 
 }
 
-section.inner.anders-2 {
+.inner.anders-2 {
     color: #17a555;
     background-color: #17a555;
 
 }
 
-section.inner.anders-3 {
+.inner.anders-3 {
     color: #ed5C4b;
     background-color: #ed5C4b;
 
 }
 
-section.inner.anders-4 {
+.inner.anders-4 {
     color: #f9b86e;
     background-color: #f9b86e;
 
@@ -367,7 +440,7 @@ section.inner.anders-4 {
 /* Articles */
 /******************/
 
-section.articles {
+.articles {
 
     list-style: none;
     width 90%;
@@ -380,44 +453,163 @@ section.articles {
 
     background-color: rgb(217, 217, 217);
     padding-top: 30px;
+
 }
+
+
 
 
 /******************/
 /* Thema's */
 /******************/
 
-section.articles > article.gewoonGoed {
-    background-color: white;
+
+
+
+/*********animaties *********/
+
+@keyframes fadeIn {
+    0% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+
+    from {
+        top: 0px;
+    }
+
+    50% {
+        top: 100px !important
+    }
+
+    /* ignored */
+    to {
+        top: 200px;
+    }
 }
 
-section.articles article.gewoonGoed img {
+/*********thema 1 *********/
+.gewoonGoed {
+    background-color: white;
+
+
+}
+
+.gewoonGoed img {
     width: 100%;
     border-bottom: 4px solid rgb(93, 184, 217);
 }
 
+.gewoonGoed:nth-last-of-type(1) {
+    animation: fadeIn 10s ease;
 
-section.articles > article.sustainablePlanet {
+
+}
+
+.gewoonGoed:nth-last-of-type(3) {
+    animation: fadeIn 8s ease;
+
+
+
+}
+
+.gewoonGoed:nth-last-of-type(8) {
+    animation: fadeIn 5s ease;
+
+
+
+}
+
+.gewoonGoed:nth-last-of-type(4) {
+    animation: fadeIn 9s ease;
+
+
+}
+
+/*********thema 2 *********/
+
+.sustainablePlanet {
     background-color: white;
 }
 
-section.articles article.sustainablePlanet img {
+.sustainablePlanet img {
 
 
     border-bottom: 4px solid rgb(23, 165, 85);
     width: 100%;
 }
+.sustainablePlanet:nth-last-of-type(2) {
+    animation: fadeIn 13s ease;
 
-section.articles > article.inspirerendeMensen {
+
+}
+
+.sustainablePlanet:nth-last-of-type(5) {
+    animation: fadeIn 16s ease;
+
+
+}
+
+.sustainablePlanet:nth-last-of-type(6) {
+    animation: fadeIn 14s ease;
+
+
+}
+
+.sustainablePlanet:nth-last-of-type(7) {
+    animation: fadeIn 12s ease;
+
+
+}
+
+.sustainablePlanet:nth-last-of-type(11) {
+    animation: fadeIn 6s ease;
+
+
+}
+
+.sustainablePlanet:nth-last-of-type(13) {
+    animation: fadeIn 9s ease;
+
+
+}
+
+
+
+
+/*********thema 3 *********/
+
+.inspirerendeMensen {
     background-color: white;
 }
 
-section.articles article.inspirerendeMensen img {
+.inspirerendeMensen img {
 
     border-bottom: 4px solid rgb(237, 92, 75);
     width: 100%;
 }
 
+.inspirerendeMensen:nth-last-of-type(9) {
+    animation: fadeIn 12s ease;
+
+
+}
+
+.inspirerendeMensen:nth-last-of-type(10) {
+    animation: fadeIn 6s ease;
+
+
+}
+.inspirerendeMensen:nth-last-of-type(12) {
+    animation: fadeIn 3s ease;
+
+
+}
 
 /******************/
 /* Typography*/
@@ -425,19 +617,19 @@ section.articles article.inspirerendeMensen img {
 
 
 
-section.articles h3 {
+.articles h3 {
 
 
     color: black;
     font-size: 16px;
- 
+
     background-color: white;
     padding-top: 0px;
     padding-left: 15px;
     padding-right: 15px;
 }
 
-section.articles p {
+.articles p {
 
 
 
@@ -455,9 +647,9 @@ section.articles p {
 /******************/
 
 footer {
-    background-color:rgb(240, 240, 240); 
+    background-color: rgb(240, 240, 240);
     padding: 90px 0;
-    margin: 
+    margin:
 }
 
 .footer-container {
@@ -470,54 +662,83 @@ footer {
     align-items: center;
     flex-wrap: wrap-reverse;
 }
+
 .footerLogo {
     width: 230px;
-}
-.social-media {
-    margin: 20px 0;
+    text-align: center;
 }
 
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-    color:black;
-    
+.social-media {
+
+
+
+    justify-content: space-around;
+
+
+    margin-right: 50px;
+
+    display: flex;
+
+}
+
+.social-media .icon {
+    width: 100%;
+    color: aliceblue;
+    width: 20px;
+}
+
+svg:hover {
+    fill: rgb(210, 168, 205);
 }
 
 /* Add a hover effect if you want */
-.fa:hover {
-  opacity: 0.7;
-}
 
-.right-text {
+
+.left-text {
     color: black;
     font-size: 12px;
 }
+
 .right-col h4 {
     font-size: 26px;
     color: black;
 
+
 }
+
 .right-col a {
     font-size: 14px;
     color: black;
-    bottom:0;
+    bottom: 0;
+    text-decoration: none;
+
 }
+
+
+.right-col a:hover {
+    color: rgb(210, 168, 205);
+
+}
+
 @media screen and (max-width:660px) {
-    .footer-container{
+    .footer-container {
         max-width: 600px
     }
-    .right-col{
+
+    .right-col {
         width: 100%;
         margin-bottom: 60px;
         text-align: center;
     }
-    .left-col{
+
+    .left-col {
         width: 100%;
         text-align: center;
     }
-}
 
+    .social-media {
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+}
