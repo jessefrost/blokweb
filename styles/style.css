@@ -1,6 +1,8 @@
 /* CSS Document */
 
-
+html {
+    scroll-behavior: smooth;
+}
 
 *,
 *::after,
@@ -37,7 +39,7 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-
+z-index: 1;
     position: sticky;
     top: 0;
     background-color: rgb(240, 240, 240);
@@ -105,6 +107,7 @@ header > a > img:hover {
     top: 0;
     right: 0;
     z-index: 1;
+
 }
 
 #menu-wrap .toggler {
@@ -116,13 +119,14 @@ header > a > img:hover {
     height: 50px;
     opacity: 0;
     position: absolute;
+
 }
 
 
 #menu-wrap .hamburger {
 
     top: 0;
-    right: 0;
+    right: ;
     width: 60px;
 
 
@@ -273,7 +277,7 @@ header > a > img:hover {
 
 #menu-wrap .menu-overlay > div > div > ul > li > a:hover {
     color: rgb(210, 168, 205);
-    text-shadow: 1px 1px 10px rgb(207, 207, 207);
+
 
 
 }
@@ -442,7 +446,7 @@ div.button-container > button:hover:not(.active) {
 
 .articles {
 
-    list-style: none;
+
     width 90%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -483,19 +487,14 @@ div.button-container > button:hover:not(.active) {
         top: 0px;
     }
 
-    50% {
-        top: 100px !important
-    }
-
-    /* ignored */
-    to {
-        top: 200px;
-    }
+    0%   { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 /*********thema 1 *********/
 .gewoonGoed {
     background-color: white;
+    cursor: pointer;
 
 
 }
@@ -503,6 +502,14 @@ div.button-container > button:hover:not(.active) {
 .gewoonGoed img {
     width: 100%;
     border-bottom: 4px solid rgb(93, 184, 217);
+}
+
+
+.gewoonGoed:hover {
+    opacity: 0.8;
+    transform: scale(0.95);
+    transition: 0.4s ease;
+
 }
 
 .gewoonGoed:nth-last-of-type(1) {
@@ -535,6 +542,7 @@ div.button-container > button:hover:not(.active) {
 
 .sustainablePlanet {
     background-color: white;
+    cursor: pointer;
 }
 
 .sustainablePlanet img {
@@ -543,6 +551,16 @@ div.button-container > button:hover:not(.active) {
     border-bottom: 4px solid rgb(23, 165, 85);
     width: 100%;
 }
+
+.sustainablePlanet:hover {
+    opacity: 0.8;
+    transform: scale(0.95);
+    transition: 0.4s ease;
+
+}
+
+
+
 .sustainablePlanet:nth-last-of-type(2) {
     animation: fadeIn 13s ease;
 
@@ -586,12 +604,20 @@ div.button-container > button:hover:not(.active) {
 
 .inspirerendeMensen {
     background-color: white;
+    cursor: pointer;
 }
 
 .inspirerendeMensen img {
 
     border-bottom: 4px solid rgb(237, 92, 75);
     width: 100%;
+}
+
+.inspirerendeMensen:hover {
+    opacity: 0.8;
+    transform: scale(0.95);
+    transition: 0.4s ease;
+
 }
 
 .inspirerendeMensen:nth-last-of-type(9) {
@@ -605,6 +631,7 @@ div.button-container > button:hover:not(.active) {
 
 
 }
+
 .inspirerendeMensen:nth-last-of-type(12) {
     animation: fadeIn 3s ease;
 
