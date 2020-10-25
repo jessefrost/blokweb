@@ -10,14 +10,13 @@ html {
     box-sizing: border-box;
 }
 
-/* een paar algemene dingetjes */
-/* hoef je niets aan te veranderen */
+
 *,
 *::after,
 *::before {
     box-sizing: border-box;
-    font-family: 'Saira', sans-serif;
-    color: DarkSlateGray;
+    font-family: 'roboto', sans-serif;
+    color: black;
 }
 
 body {
@@ -62,7 +61,7 @@ header > img {
 /* logo/name */
 /*************/
 
-/* hoef je niets aan te veranderen */
+
 
 header > a {
     display: block;
@@ -100,7 +99,10 @@ header > a > img:hover {
 
 
 /*************/
-/* navigatie */
+/* navigatie    
+Pure CSS Hamburger Menu & Overlay
+Refference: https://codepen.io/bradtraversy/pen/vMGBjQ
+*/
 /*************/
 #menu-wrap {
 
@@ -283,11 +285,12 @@ header > a > img:hover {
 }
 
 
-/* styling van het zoekveld en de button */
-/* hoef je niets aan te veranderen */
 
 
 
+/******************/
+/* Eerste section
+/******************/
 
 
 .outer {
@@ -447,7 +450,7 @@ div.button-container > button:hover:not(.active) {
 .articles {
 
 
-    width 90%;
+
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-row: 20px;
@@ -487,8 +490,13 @@ div.button-container > button:hover:not(.active) {
         top: 0px;
     }
 
-    0%   { opacity: 0; }
-  100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 /*********thema 1 *********/
@@ -597,6 +605,18 @@ div.button-container > button:hover:not(.active) {
 
 }
 
+/*********thema 3 (link) *********/
+a {
+    text-decoration: none;
+}
+
+a .sustainablePlanet {
+    background-color: white;
+    cursor: pointer;
+    height: 100%;
+    padding-bottom: 1px;
+
+}
 
 
 
@@ -639,7 +659,7 @@ div.button-container > button:hover:not(.active) {
 }
 
 /******************/
-/* Typography*/
+/* Typography articles*/
 /******************/
 
 
@@ -655,6 +675,20 @@ div.button-container > button:hover:not(.active) {
     padding-left: 15px;
     padding-right: 15px;
 }
+
+
+.articles h3 {
+
+
+    color: black;
+    font-size: 16px;
+
+    background-color: white;
+    padding-top: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 
 .articles p {
 
@@ -718,7 +752,6 @@ svg:hover {
     fill: rgb(210, 168, 205);
 }
 
-/* Add a hover effect if you want */
 
 
 .left-text {
@@ -747,6 +780,10 @@ svg:hover {
 
 }
 
+/******************/
+/* Footerresponsive*/
+/******************/
+
 @media screen and (max-width:660px) {
     .footer-container {
         max-width: 600px
@@ -767,5 +804,132 @@ svg:hover {
         margin-left: 80px;
         margin-right: 80px;
     }
+
+}
+
+/******************/
+/* Pagina 2*/
+/******************/
+.pagina2 {
+    flex-direction: column;
+
+    display: flex;
+    height: 100%;
+    background-color: rgb(217, 217, 217);
+    align-items: center;
+}
+
+
+.pagina2 section {
+
+    margin-top: 30px;
+    padding-top: -0px;
+    background: linear-gradient(180deg, rgb(23, 165, 85) 50%, #ffffff 60%);
+    width: clamp(46ch, 75%, 86ch);
+
+
+}
+
+
+
+.pagina2 section img {
+
+
+
+    display: block;
+    width: 100%;
+
+    border-bottom: rgb(23, 165, 85) 3px solid;
+}
+
+.pagina2 section .dza {
+
+
+width: clamp(140px, 14vw, 180px);
+ border: none;
+    
+}
+.dza.anders {
+ float: right;
+
+}
+
+.pagina2 section a {
+    color: rgb(23, 165, 85);
+}
+
+.pagina2 section a:hover {
+    color: rgb(156, 156, 156);
+}
+
+
+.pagina2 section h2 {
+
+    background-color: rgb(23, 165, 85);
+    font-size: clamp(14px, 2vw, 18px);
+    color: white;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: -10px
+}
+
+
+
+.pagina2 section .animatie {
+    background-color: white;
+    font-size: clamp(14px, 2vw, 18px);
+    padding-right: 15px;
+    padding-left: 15px;
+    color: rgb(23, 165, 85);
+
+
+
+}
+
+.pagina2 section p {
+    background-color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 1.3;
+    color: black;
+    font-size: clamp(12px, 2vw, 15px);
+}
+
+@media screen and (max-width:600px) {
+    .pagina2 section h2 {
+
+        text-align: center;
+    }
+}
+
+/******************/
+/* Pagina 2 section 2*/
+/******************/
+.pagina2 section:nth-child(2) {
+
+    margin-bottom: 40px;
+    background: white;
+    width: clamp(46ch, 75%, 86ch);
+
+
+}
+
+.pagina2 section h5 {
+    font-size: clamp(12px, 2vw, 16px);
+    margin-bottom: -5px;
+    color: black;
+    background-color: white;
+
+    padding-right: 15px;
+    padding-left: 15px;
+
+
+
+}
+
+.pagina2 section:nth-child(2) img {
+    border: none;
+
 
 }

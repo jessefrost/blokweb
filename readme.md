@@ -6,31 +6,27 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 
 ## Bronnenlijst
-1. -bron 1-
-2. -bron 2-
-3. -...-
+1. https://codepen.io/
+2. https://css-tricks.com/
+3. Pure CSS Hamburger Menu & Overlay - https://www.youtube.com/watch?v=DZg6UfS5zYg
 
 
 
 ## Eindgesprek (week 7/8)
 
--dit ging goed & dit was lastig-
 
-**Screenshot(s):**
-
--screenshot(s) van je eindresultaat-
 
 
 
 ## Voortgang 3 (week 6)
 
--same as voortgang 1-
+Alle pagina's zijn af, behalve de carousel, ik laat dat plan vallen en ga voor een eer simpele JS 
 
 
 
 ## Voortgang 2 (week 5)
 
--same as voortgang 1-
+Index.html is bijna af op JS na
 
 
 
@@ -38,19 +34,10 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ### Stand van zaken
 
--dit ging goed & dit was lastig-
+- Bezig met met dee eerste content op de Index.html + begin carrousel JS (javascript is nog lastig)
 
-**Screenshot(s):**
 
--screenshot(s) van hoe ver je bent-
 
-### Agenda voor meeting
-
--samen met je groepje opstellen-
-
-### Verslag van meeting
-
--na afloop snel uitkomsten vastleggen-
 
 
 
