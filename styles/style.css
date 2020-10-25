@@ -800,11 +800,7 @@ svg:hover {
         text-align: center;
     }
 
-    .social-media {
-        margin-left: 80px;
-        margin-right: 80px;
-    }
-
+   
 }
 
 /******************/
@@ -817,22 +813,27 @@ svg:hover {
     height: 100%;
     background-color: rgb(217, 217, 217);
     align-items: center;
+    left: 0;
+    right: 0;
+
 }
 
 
-.pagina2 section {
+.pagina2  section {
 
     margin-top: 30px;
-    padding-top: -0px;
+ 
     background: linear-gradient(180deg, rgb(23, 165, 85) 50%, #ffffff 60%);
-    width: clamp(46ch, 75%, 86ch);
+    width: clamp(35ch, 75%, 86ch);
+        margin-right: 20px;
+    margin-left: 20px;
 
 
 }
 
 
 
-.pagina2 section img {
+.pagina2  section img {
 
 
 
@@ -842,7 +843,7 @@ svg:hover {
     border-bottom: rgb(23, 165, 85) 3px solid;
 }
 
-.pagina2 section .dza {
+.pagina2  section .dza {
 
 
 width: clamp(140px, 14vw, 180px);
@@ -854,16 +855,16 @@ width: clamp(140px, 14vw, 180px);
 
 }
 
-.pagina2 section a {
+.pagina2  section a {
     color: rgb(23, 165, 85);
 }
 
-.pagina2 section a:hover {
+.outer section a:hover {
     color: rgb(156, 156, 156);
 }
 
 
-.pagina2 section h2 {
+.pagina2  section h2 {
 
     background-color: rgb(23, 165, 85);
     font-size: clamp(14px, 2vw, 18px);
@@ -876,7 +877,7 @@ width: clamp(140px, 14vw, 180px);
 
 
 
-.pagina2 section .animatie {
+.pagina2  section .animatie {
     background-color: white;
     font-size: clamp(14px, 2vw, 18px);
     padding-right: 15px;
@@ -887,7 +888,7 @@ width: clamp(140px, 14vw, 180px);
 
 }
 
-.pagina2 section p {
+.pagina2  section p {
     background-color: white;
     padding-left: 15px;
     padding-right: 15px;
@@ -897,7 +898,7 @@ width: clamp(140px, 14vw, 180px);
 }
 
 @media screen and (max-width:600px) {
-    .pagina2 section h2 {
+    .outer section h2 {
 
         text-align: center;
     }
@@ -906,16 +907,16 @@ width: clamp(140px, 14vw, 180px);
 /******************/
 /* Pagina 2 section 2*/
 /******************/
-.pagina2 section:nth-child(2) {
+.pagina2  section:nth-child(2) {
 
     margin-bottom: 40px;
     background: white;
-    width: clamp(46ch, 75%, 86ch);
+    width: clamp(35ch, 75%, 86ch);
 
 
 }
 
-.pagina2 section h5 {
+.pagina2  section h5 {
     font-size: clamp(12px, 2vw, 16px);
     margin-bottom: -5px;
     color: black;
@@ -928,7 +929,7 @@ width: clamp(140px, 14vw, 180px);
 
 }
 
-.pagina2 section:nth-child(2) img {
+.pagina2  section:nth-child(2) img {
     border: none;
 
 
