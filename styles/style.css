@@ -347,7 +347,7 @@ h1 {
 
 
 
-.inner #h2-1 {
+.inner h4 {
 
     font-size: clamp(14px, 2vw, 18px);
     color: white;
@@ -410,32 +410,6 @@ div.button-container > button:hover:not(.active) {
     background-color: white;
     border: 2px solid white;
     cursor: pointer;
-}
-
-
-/* Carousel_Script */
-.inner.anders-1 {
-    color: #56c6e1;
-    background-color: #56c6e1;
-
-}
-
-.inner.anders-2 {
-    color: #17a555;
-    background-color: #17a555;
-
-}
-
-.inner.anders-3 {
-    color: #ed5C4b;
-    background-color: #ed5C4b;
-
-}
-
-.inner.anders-4 {
-    color: #f9b86e;
-    background-color: #f9b86e;
-
 }
 
 
@@ -781,7 +755,7 @@ svg:hover {
 }
 
 /******************/
-/* Footerresponsive*/
+/* Footer responsive*/
 /******************/
 
 @media screen and (max-width:660px) {
@@ -800,7 +774,7 @@ svg:hover {
         text-align: center;
     }
 
-   
+
 }
 
 /******************/
@@ -810,30 +784,29 @@ svg:hover {
     flex-direction: column;
 
     display: flex;
-    height: 100%;
+
     background-color: rgb(217, 217, 217);
     align-items: center;
-    left: 0;
-    right: 0;
+
 
 }
 
 
-.pagina2  section {
+.pagina2 section {
 
     margin-top: 30px;
- 
+
+    min-width: 375px;
+    max-width: 700px;
     background: linear-gradient(180deg, rgb(23, 165, 85) 50%, #ffffff 60%);
-    width: clamp(35ch, 75%, 86ch);
-        margin-right: 20px;
-    margin-left: 20px;
+
 
 
 }
 
 
 
-.pagina2  section img {
+.pagina2 section img {
 
 
 
@@ -843,29 +816,38 @@ svg:hover {
     border-bottom: rgb(23, 165, 85) 3px solid;
 }
 
-.pagina2  section .dza {
+.pagina2 section .dza {
 
 
-width: clamp(140px, 14vw, 180px);
- border: none;
-    
+    width: clamp(140px, 14vw, 180px);
+    border: none;
+
 }
+
+.pagina2 section .dza:hover {
+
+    transform: scale(0.7);
+    transition: 0.4s ease;
+
+}
+
+
+
 .dza.anders {
- float: right;
+    float: right;
 
 }
 
-.pagina2  section a {
+.pagina2 section a {
     color: rgb(23, 165, 85);
 }
-
 
 .pagina2 section a:hover {
     color: rgb(156, 156, 156);
 }
 
 
-.pagina2  section h2 {
+.pagina2 section h2 {
 
     background-color: rgb(23, 165, 85);
     font-size: clamp(14px, 2vw, 18px);
@@ -878,7 +860,7 @@ width: clamp(140px, 14vw, 180px);
 
 
 
-.pagina2  section .animatie {
+.pagina2 section .animatie {
     background-color: white;
     font-size: clamp(14px, 2vw, 18px);
     padding-right: 15px;
@@ -889,7 +871,7 @@ width: clamp(140px, 14vw, 180px);
 
 }
 
-.pagina2  section p {
+.pagina2 section p {
     background-color: white;
     padding-left: 15px;
     padding-right: 15px;
@@ -899,26 +881,32 @@ width: clamp(140px, 14vw, 180px);
 }
 
 @media screen and (max-width:600px) {
-    
-.pagina2 section h2 {
+    .pagina2 section h2 {
 
         text-align: center;
     }
 }
+@media screen and (max-width:360px) {
+    .pagina2 section  {
+
+            min-width: 320px;
+    }
+}
+
 
 /******************/
 /* Pagina 2 section 2*/
 /******************/
-.pagina2  section:nth-child(2) {
+.pagina2 section:nth-child(2) {
 
     margin-bottom: 40px;
     background: white;
-    width: clamp(35ch, 75%, 86ch);
+
 
 
 }
 
-.pagina2  section h5 {
+.pagina2 section h5 {
     font-size: clamp(12px, 2vw, 16px);
     margin-bottom: -5px;
     color: black;
@@ -931,7 +919,7 @@ width: clamp(140px, 14vw, 180px);
 
 }
 
-.pagina2  section:nth-child(2) img {
+.pagina2 section:nth-child(2) img {
     border: none;
 
 
