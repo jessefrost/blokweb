@@ -859,7 +859,8 @@ width: clamp(140px, 14vw, 180px);
     color: rgb(23, 165, 85);
 }
 
-.outer section a:hover {
+
+.pagina2 section a:hover {
     color: rgb(156, 156, 156);
 }
 
@@ -898,7 +899,8 @@ width: clamp(140px, 14vw, 180px);
 }
 
 @media screen and (max-width:600px) {
-    .outer section h2 {
+    
+.pagina2 section h2 {
 
         text-align: center;
     }
