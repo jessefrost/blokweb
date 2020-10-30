@@ -278,7 +278,7 @@ Refference: https://codepen.io/bradtraversy/pen/vMGBjQ
 
 
 #menu-wrap .menu-overlay > div > div > ul > li > a:hover {
-    color: rgb(210, 168, 205);
+    color: #4a7c59;
 
 
 
@@ -590,6 +590,7 @@ div.button-container > button:hover:not(.active) {
 }
 
 .Partners {
+    padding-top: 30px;
     background-color: #f9f9f2;
  
 box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
@@ -679,6 +680,7 @@ justify-items: center;
     align-items: center;
     justify-content: center;
     background-color: white;
+    padding-bottom:  60px;
 }
 
 .Youtube iframe {
@@ -695,6 +697,64 @@ justify-items: center;
     height: 350px;
 }
 
+    
+}
+
+
+
+.donation {
+    
+        background: url('../images/cover_1920x1300.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.donation section {
+    margin-left: 15%;
+    background-color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-right: 10px;
+    padding-bottom: 10px;
+
+    
+        
+}
+
+.donation section h2 {
+        font-size: 26px;
+    color: #4a7c59;
+    
+}
+.donation iframe {
+    padding-top: 20px;
+    margin-right: 20%;
+
+}
+@media screen and (max-width:900px){
+    .donation {
+        background-image:none;
+    }
+    .donation section {
+  display: none;
+}
+    .donation iframe {
+        margin-right: 0%;
+    }
+    
+}
+
+
+@media screen and (max-width:600px){
+    .donation iframe {
+      
+    }
     
 }
 /******************/
@@ -760,7 +820,7 @@ footer {
 }
 
 svg:hover {
-    fill: rgb(210, 168, 205);
+    fill: #4a7c59;
 }
 
 
@@ -787,7 +847,7 @@ svg:hover {
 
 
 .right-col a:hover {
-    color: rgb(210, 168, 205);
+    color: #4a7c59;
 
 }
 
