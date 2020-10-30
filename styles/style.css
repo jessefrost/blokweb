@@ -455,8 +455,8 @@ div.button-container > button:hover:not(.active) {
 .articles section {
     width: 50%;
     background-color: #f9f9f2;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
     padding-bottom: 30px;
     padding-top: 20px;
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
@@ -465,8 +465,7 @@ div.button-container > button:hover:not(.active) {
 
 .articles section h1 {
     font-size: clamp(26px, 3vw, 40px);
-    padding-left: 15px;
-    padding-right: 15px;
+
     color: #4a7c59;
     line-height: clamp(30px, 3vw, 45px);
 
@@ -544,6 +543,9 @@ div.button-container > button:hover:not(.active) {
     align-items: center;
 }
 
+
+
+
 @media screen and (max-width:900px) {
     .articles2 {
 
@@ -551,6 +553,9 @@ div.button-container > button:hover:not(.active) {
         background-color: white;
         flex-direction: column;
     }
+    
+
+
 
     .articles2 section:nth-child(1) {
 
@@ -573,6 +578,14 @@ div.button-container > button:hover:not(.active) {
 
 
 
+}
+@media screen and (max-width:500px) {
+   
+    .articles2 section {
+    padding-left: 50px;
+    padding-right: 50px;
+    }
+    
 }
 
 .articles2 section h2 {
