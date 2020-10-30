@@ -21,7 +21,7 @@ html {
 
 body {
     margin: 0;
-    background-color: rgb(105, 105, 105);
+    background-color: #f9f9f2;
 
 
 }
@@ -72,7 +72,7 @@ header > a {
 
     font-weight: bold;
     color: DarkSlateGray;
-    background: url("BV_IconicLogo.png") .75em center / auto 2.75em no-repeat;
+    background: url("BVF_IconicLogo.png") .75em center / auto 2.75em no-repeat;
 
     text-decoration: none;
     outline: none;
@@ -298,7 +298,7 @@ Refference: https://codepen.io/bradtraversy/pen/vMGBjQ
     justify-content: center;
     display: flex;
     height: 100%;
-    background-color: rgb(105, 105, 105);
+    background-color: rgb(240, 240, 240);
 
 
 
@@ -312,18 +312,28 @@ Refference: https://codepen.io/bradtraversy/pen/vMGBjQ
 /******************/
 
 
-h1 {
-    color: white;
-    font-size: clamp(18px, 2vw, 23px);
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 
+#myVideo {
+    width: 100%;
 
 
 }
 
+
+
+
+
+
+.outer img {
+    position: absolute;
+    width: clamp(36ch, 50%, 60ch);
+    margin-top: clamp(6ch, 20%, 26ch);
+
+
+
+
+
+}
 
 
 .inner {
@@ -420,26 +430,273 @@ div.button-container > button:hover:not(.active) {
 /******************/
 /* Articles */
 /******************/
+.mainContent {
+    background: url('../images/wallpaper_logo_detached-scaled.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .articles {
 
 
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+
+
+    padding-top: 30px;
+
+}
+
+.articles section {
+    width: 50%;
+    background-color: #f9f9f2;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+    margin-top: -50px;
+}
+
+.articles section h1 {
+    font-size: clamp(26px, 3vw, 40px);
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #4a7c59;
+    line-height: clamp(30px, 3vw, 45px);
+
+}
+
+.articles section h2 {
+    text-align: center;
+    color: #4a7c59;
+
+
+}
+
+.articles section p {
+    background-color: none;
+    line-height: 18px;
+    font-size: clamp(12px, 2vw, 14px);
+    color: #a1a499;
+}
+
+.articles section:nth-child(2) {
+    background: none;
+    margin-top: 100px;
+    box-shadow: none;
+
+}
+
+.articles section:nth-child(2) p {
+    color: black;
+    font-size: clamp(12px, 2vw, 14px);
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+
+
+@media screen and (max-width:820px) {
+    .articles section {
+        width: 70%;
+    }
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width:600px) {
+    .articles {}
+
+    .articles section {
+        width: 100%;
+    }
+
+    .articles section h1 {
+
+        font-size: 20px;
+    }
+
+    .articles section h2 {
+
+        font-size: 20px;
+    }
+
+
+}
+
+.articles2 {
+
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:900px) {
+    .articles2 {
+
+
+        background-color: white;
+        flex-direction: column;
+    }
+
+    .articles2 section:nth-child(1) {
+
+        margin-top: 30px;
+    }
+
+    .articles2 h2 {
+
+
+        font-size: 16px;
+    }
+}
+
+.articles2 section {
+
+
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-bottom: 30px;
+
+
+
+}
+
+.articles2 section h2 {
+
+    color: #4a7c59;
+
+
+}
+
+.articles2 section p {
+    background-color: none;
+    line-height: 18px;
+    font-size: clamp(12px, 2vw, 14px);
+    color: black;
+}
+
+.Partners {
+    background-color: #f9f9f2;
+ 
+box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+
+}
+
+.Partners section h2 {
+    text-align: center;
+    font-size: 26px;
+    color: #4a7c59;
+}
+
+.Partners section ul {
+    color: #4a7c59;
+margin-right: 30px;
+    align-content: center;
+justify-items: center;
+    list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-row: 20px;
-    grid-gap: 20px;
+    padding-bottom: 30px;
 
-    padding: 40px;
 
-    background-color: rgb(217, 217, 217);
-    padding-top: 30px;
+}
+
+.Partners section ul li {
+
+    width: 200px;
+    height: 150px;
+}
+
+@media screen and (max-width:650px) {
+    .Partners section h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .Partners section ul li {
+
+        width: 150px;
+        height: 150px;
+
+    }
+}
+
+
+.Partners section ul li:nth-child(1) {
+    background: url('../images/Hoorneboeg_logo_DEF_Transparant.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.Partners section ul li:nth-child(2) {
+    background: url('../images/earth-today.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.Partners section ul li:nth-child(3) {
+    background: url('../images/triplle.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.Partners section ul li:nth-child(4) {
+    background: url('../images/moonvneutres.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 
 }
 
 
 
 
+
+.Youtube {
+
+    padding-top:  60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.Youtube iframe {
+    width: 70%;
+    height: 500px;
+    
+}
+
+
+
+@media screen and (max-width:700px){
+    .Youtube iframe {
+    width: 100%;
+    height: 350px;
+}
+
+    
+}
 /******************/
 /* Thema's */
 /******************/
@@ -449,233 +706,13 @@ div.button-container > button:hover:not(.active) {
 
 /*********animaties *********/
 
-@keyframes fadeIn {
-    0% {
-        transform: scale(0);
-        -webkit-transform: scale(0);
-    }
 
-    100% {
-        transform: scale(1.0);
-        -webkit-transform: scale(1.0);
-    }
-
-    from {
-        top: 0px;
-    }
-
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
 
 /*********thema 1 *********/
-.gewoonGoed {
-    background-color: white;
-    cursor: pointer;
 
 
-}
 
-.gewoonGoed img {
-    width: 100%;
-    border-bottom: 4px solid rgb(93, 184, 217);
-}
 
-
-.gewoonGoed:hover {
-    opacity: 0.8;
-    transform: scale(0.95);
-    transition: 0.4s ease;
-
-}
-
-.gewoonGoed:nth-last-of-type(1) {
-    animation: fadeIn 10s ease;
-
-
-}
-
-.gewoonGoed:nth-last-of-type(3) {
-    animation: fadeIn 8s ease;
-
-
-
-}
-
-.gewoonGoed:nth-last-of-type(8) {
-    animation: fadeIn 5s ease;
-
-
-
-}
-
-.gewoonGoed:nth-last-of-type(4) {
-    animation: fadeIn 9s ease;
-
-
-}
-
-/*********thema 2 *********/
-
-.sustainablePlanet {
-    background-color: white;
-    cursor: pointer;
-}
-
-.sustainablePlanet img {
-
-
-    border-bottom: 4px solid rgb(23, 165, 85);
-    width: 100%;
-}
-
-.sustainablePlanet:hover {
-    opacity: 0.8;
-    transform: scale(0.95);
-    transition: 0.4s ease;
-
-}
-
-
-
-.sustainablePlanet:nth-last-of-type(2) {
-    animation: fadeIn 13s ease;
-
-
-}
-
-.sustainablePlanet:nth-last-of-type(5) {
-    animation: fadeIn 16s ease;
-
-
-}
-
-.sustainablePlanet:nth-last-of-type(6) {
-    animation: fadeIn 14s ease;
-
-
-}
-
-.sustainablePlanet:nth-last-of-type(7) {
-    animation: fadeIn 12s ease;
-
-
-}
-
-.sustainablePlanet:nth-last-of-type(11) {
-    animation: fadeIn 6s ease;
-
-
-}
-
-.sustainablePlanet:nth-last-of-type(13) {
-    animation: fadeIn 9s ease;
-
-
-}
-
-/*********thema 3 (link) *********/
-a {
-    text-decoration: none;
-}
-
-a .sustainablePlanet {
-    background-color: white;
-    cursor: pointer;
-    height: 100%;
-    padding-bottom: 1px;
-
-}
-
-
-
-/*********thema 3 *********/
-
-.inspirerendeMensen {
-    background-color: white;
-    cursor: pointer;
-}
-
-.inspirerendeMensen img {
-
-    border-bottom: 4px solid rgb(237, 92, 75);
-    width: 100%;
-}
-
-.inspirerendeMensen:hover {
-    opacity: 0.8;
-    transform: scale(0.95);
-    transition: 0.4s ease;
-
-}
-
-.inspirerendeMensen:nth-last-of-type(9) {
-    animation: fadeIn 12s ease;
-
-
-}
-
-.inspirerendeMensen:nth-last-of-type(10) {
-    animation: fadeIn 6s ease;
-
-
-}
-
-.inspirerendeMensen:nth-last-of-type(12) {
-    animation: fadeIn 3s ease;
-
-
-}
-
-/******************/
-/* Typography articles*/
-/******************/
-
-
-
-.articles h3 {
-
-
-    color: black;
-    font-size: 16px;
-
-    background-color: white;
-    padding-top: 0px;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-
-.articles h3 {
-
-
-    color: black;
-    font-size: 16px;
-
-    background-color: white;
-    padding-top: 0px;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-
-.articles p {
-
-
-
-    color: black;
-    font-size: 12px;
-
-    background-color: white;
-    padding-top: 0px;
-    padding-left: 15px;
-    padding-right: 15px;
-}
 
 /******************/
 /* Footer*/
@@ -886,10 +923,11 @@ svg:hover {
         text-align: center;
     }
 }
-@media screen and (max-width:360px) {
-    .pagina2 section  {
 
-            min-width: 320px;
+@media screen and (max-width:360px) {
+    .pagina2 section {
+
+        min-width: 320px;
     }
 }
 
