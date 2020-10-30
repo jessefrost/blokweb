@@ -326,7 +326,7 @@ Refference: https://codepen.io/bradtraversy/pen/vMGBjQ
 
 .outer img {
     position: absolute;
-    width: clamp(36ch, 50%, 60ch);
+    width: clamp(26ch, 50%, 60ch);
     margin-top: clamp(6ch, 20%, 26ch);
 
 
